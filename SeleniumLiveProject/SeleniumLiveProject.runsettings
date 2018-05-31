@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>  
+<RunSettings>  
+  <!-- Parameters used by tests at runtime -->  
+  <TestRunParameters>
+    <!-- REPLACE THE APPLICATIONBASEURL BEFORE EVERYTHING!!!!!!!!!!!!-->
+    <Parameter name="ApplicationBaseUrl" value="http://www.demo.guru99.com/"/>
+    <Parameter name ="BrowserName" value="Firefox"/>
+    <Parameter name="VendorDirectory" value="\Vendor"/>
+  </TestRunParameters>  
+</RunSettings> 
