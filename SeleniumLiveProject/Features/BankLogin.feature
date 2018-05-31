@@ -7,5 +7,5 @@
 Scenario: Verify Bank Login Credentials
 	Given I am on the Bank Login Page 
 	And I enter in valid credentials
-	When I click Login
+	When I select Login
 	Then I am logged in 

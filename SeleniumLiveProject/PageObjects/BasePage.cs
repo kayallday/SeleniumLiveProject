@@ -227,6 +227,11 @@ FromSeconds(maxWaitTime));
         {
             Driver.SwitchTo().Window(windowName);
         }
+        
+        protected void SwitchFrame(string frameName)
+        {
+            Driver.SwitchTo().Frame(frameName);
+        }
 
         protected void ClearTextbox(IWebElement element)
         {

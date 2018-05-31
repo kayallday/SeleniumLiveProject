@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using SeleniumLiveProject.PageObjects;
 
 namespace SeleniumLiveProject.StepDefinitions
 {
@@ -35,25 +36,29 @@ namespace SeleniumLiveProject.StepDefinitions
         [Given(@"I am on the Bank Login Page")]
         public void GivenIAmOnTheBankLoginPage()
         {
-            ScenarioContext.Current.Pending();
+            BankLoginPage bankLoginPage = new BankLoginPage(Driver);
+            bankLoginPage.VisitBankLoginPage();
         }
 
         [Given(@"I enter in valid credentials")]
         public void GivenIEnterInValidCredentials()
         {
-            ScenarioContext.Current.Pending();
+            BankLoginPage bankLoginPage = new BankLoginPage(Driver);
+            bankLoginPage.EnterLoginCredentials();
         }
 
-        [When(@"I click Login")]
-        public void WhenIClickLogin()
+        [When(@"I select Login")]
+        public void WhenISelectLogin()
         {
-            ScenarioContext.Current.Pending();
+            BankLoginPage bankLoginPage = new BankLoginPage(Driver);
+            bankLoginPage.SelectLogin();
         }
 
         [Then(@"I am logged in")]
         public void ThenIAmLoggedIn()
         {
-            ScenarioContext.Current.Pending();
+            BankLoginPage bankLoginPage = new BankLoginPage(Driver);
+            bankLoginPage.VerifyLogin();
         }
 
     }

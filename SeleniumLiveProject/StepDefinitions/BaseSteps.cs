@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Firefox;
+using System;
 using System.Configuration;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
@@ -26,7 +27,7 @@ namespace SeleniumLiveProject.StepDefinitions
 
         private string GetConfigValue(string key)
         {
-            return (string)TestContext.CurrentContext.Test.Properties.Get(key) ?? ConfigurationManager.AppSettings[key];
+            return TestContext.Parameters[key] ?? ConfigurationManager.AppSettings[key];
         }
 
         [SetUp]
